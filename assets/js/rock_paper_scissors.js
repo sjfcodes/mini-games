@@ -2,7 +2,7 @@ const playGame = (data) => {
     let uChoice;
     const cChoice = data.options[Math.floor(Math.random() * data.options.length)]
     const handleResult = (key) => !(alert(`you chose ${uChoice} & computer chose ${cChoice}`)) && !(alert(key === 'tie' ? 'its a tie!' : `you ${key}!`)) && !(data[key]++) && data.rounds++
-    while (!data.options.includes(uChoice)) uChoice = prompt(`choose ${data.options}`).toLowerCase()
+    while (!data.options.includes(uChoice)) uChoice = prompt(`choose ${data.options}`)?.toLowerCase()
     if (cChoice === uChoice) handleResult('tie')
     else if (uChoice === 'rock' && cChoice === 'scissors' || uChoice === 'paper' && cChoice === 'rock' || uChoice === 'scissors' && cChoice === 'paper') handleResult('win')
     else handleResult('lose')

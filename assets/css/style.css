@@ -1,6 +1,7 @@
 body {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -9,4 +10,9 @@ button {
   font-size: 24px;
   padding: 1em;
   border-radius: 1em;
+  width: 20em;
+  margin: 1em;
+}
+button:hover {
+  transform: scale(1.05);
 }
